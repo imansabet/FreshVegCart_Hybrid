@@ -20,6 +20,8 @@ public class Order
 
     public int UserAddressId  { get; set; }
     public string Address { get; set; }
+    public string AddressName { get; set; }
+    public int TotalItems { get; set; }
 
 
     public virtual ICollection<OrderItem> Items { get; set; } = [];
