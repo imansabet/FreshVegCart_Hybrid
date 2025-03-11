@@ -1,5 +1,6 @@
 using FreshVegCart.Api.Data;
 using FreshVegCart.Api.Data.Entities;
+using FreshVegCart.Api.Endpoints;
 using FreshVegCart.Api.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -36,6 +37,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapProductEndpoints()
+    .MapAuthEndpoints()
+    .MapUserEndpoints()
+    .MapOrderEndpoints();
 
 
 app.Run();

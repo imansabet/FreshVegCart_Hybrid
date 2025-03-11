@@ -68,7 +68,7 @@ public class UserService
 
 
     public async Task<AddressDto[]> GetAddressesAsync(int userId) =>
-        await _context.UserAddresses
+        await _context.UserAddresses 
         .AsNoTracking()
         .Where(a => a.Id == userId)
         .Select(a => new AddressDto
